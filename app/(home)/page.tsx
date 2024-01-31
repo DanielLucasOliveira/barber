@@ -52,8 +52,6 @@ export default async function Home() {
           ))}
         </div>
       </div>
-
-      <Footer/>
     </div>
   );
 }
