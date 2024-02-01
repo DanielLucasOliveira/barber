@@ -6,7 +6,7 @@ interface SaveBookingParams {
     barbershopId: string;
     serviceId: string;
     userId: string;
-    date: string;
+    date: Date;
 }
 
 export const saveBooking = async (params: SaveBookingParams) => {
@@ -15,7 +15,7 @@ export const saveBooking = async (params: SaveBookingParams) => {
             serviceId: params.serviceId,
             userId: params.userId,
             date: params.date,
-            barbershop: params.barbershopId
+            barbershopId: params.barbershopId,
         }
     })
 }
