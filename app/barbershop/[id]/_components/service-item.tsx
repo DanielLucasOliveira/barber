@@ -199,12 +199,12 @@ const ServiceItem = ({ service, barbershop, isAuthenticated }: ServiceItemProps)
 
                                     {/* Mostrar lista de horários apenas se alguma data estiver selecionada */}
                                     {date && (
-                                        <div className="flex gap-3 overflow-x-auto py-6 px-5 border-t border-solid border-secondary [&::-webkit-scrollbar]:hidden">
+                                        <div className="flex gap-3 overflow-x-auto py-6 px-5 border-t border-solid border-secondary [&::-webkit-scrollbar]:overflow-x-hidden">
                                             {timeList.map((time) => (
                                                 <Button
                                                     onClick={() => handleHourClick(time)}
                                                     variant={hour === time ? "default" : "outline"}
-                                                    className="rounded-full"
+                                                    className="rounded-full mt-2"
                                                     key={time}
                                                 >
                                                     {time}
