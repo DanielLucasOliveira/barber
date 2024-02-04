@@ -34,6 +34,45 @@
 
     --radius: 0.5rem;
   }
+
+  .light {
+    --background: 228 6% 98%; /* branco */
+    --foreground: 212 40% 16%; /* azul escuro */
+
+    --card:232, 40%, 19%; /* branco */
+    --card-foreground: 212 40% 16%; /* azul escuro */
+
+    --popover: 232, 40%, 19%; /* branco */
+    --popover-foreground: 212 40% 16%; /* azul escuro */
+
+    --primary: 204 100% 55%; /* azul claro */
+    --primary-foreground: 0 0% 100%; /* branco */
+
+    --secondary: 232 28% 93%; /* azul claro */
+    --secondary-foreground: 212 40% 16%; /* azul escuro */
+
+    --muted: 240 6% 100%; /* branco */
+    --muted-foreground: 212 40% 16%; /* azul escuro */
+
+    --accent: 232 28% 93%; /* azul claro */
+    --accent-foreground: 212 40% 16%; /* azul escuro */
+
+    --destructive: 0 84% 60%; /* vermelho */
+    --destructive-foreground: 212 40% 16%; /* azul escuro */
+
+    --border: 240 6% 100%; /* branco */
+    --input: 240 6% 100%; /* branco */
+    --ring: 212 40% 90%; /* azul claro */
+
+    --radius: 0.5rem;
+
+    * h2, h3{
+      color: var(--primary)
+    }
+}
+
+
+
 }
 
 @layer base {
