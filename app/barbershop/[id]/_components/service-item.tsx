@@ -11,7 +11,7 @@ import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import { generateDayTimeList } from "../_helpers/hours";
 import { addDays, format, setHours, setMinutes } from "date-fns";
-
+import { revalidatePath } from "next/cache";
 import { Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
@@ -94,8 +94,11 @@ const ServiceItem = ({ service, barbershop, isAuthenticated }: ServiceItemProps)
                 action: {
                     label: "Visualizar",
                     onClick: () => router.push("/bookings"),
+
                 },
             });
+            revalidatePath("/bookings");
+
         } catch (error) {
             console.error(error);
         } finally {

@@ -5,6 +5,8 @@ import { redirect } from "next/navigation";
 import { db } from "../_lib/prisma";
 import BookingItem from "../_components/booking-item";
 import { authOptions } from "../_lib/auth";
+import Link from "next/link";
+import { Button } from "../_components/ui/button";
 
 const BookingsPage = async () => {
     const session = await getServerSession(authOptions);
@@ -70,6 +72,13 @@ const BookingsPage = async () => {
                         </div>
                     </>
                 )}
+                <div className="p-5">
+                    <Link href="/">
+                        <Button className="absolute right-4 p-5 mr-1">
+                            Voltar
+                        </Button>
+                    </Link>
+                </div>
             </div>
         </>
     );
