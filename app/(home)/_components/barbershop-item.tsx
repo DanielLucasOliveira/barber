@@ -36,7 +36,7 @@ const BarbershopItem = ({ barbershop }: BarbershopItemProps) => {
                             objectFit: "cover",
                         }}
                         fill
-                        className="rounded-2xl"
+                        className="rounded-2xl mt-1"
                     />
                 </div>
 
